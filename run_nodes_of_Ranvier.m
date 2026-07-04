@@ -1,12 +1,5 @@
 %% run_nodes_of_ranvier_pipeline.m
 
-% Requirements:
-%   - Bio-Formats MATLAB toolbox
-%   - bfOpen3DVolume
-%   - util_forcept_segmentation
-%   - util_plot
-%   - util_nr_quantification
-%   - optional: imshow3D
 
 clear; clc;
 
