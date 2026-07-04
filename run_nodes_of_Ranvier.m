@@ -119,7 +119,7 @@ function process_single_volume(inputDir, outputDir, fileName, baseName, cfg)
 
     % Display optional quality control
     if cfg.displayResults
-        show_segmentation(filteredVolume, labelVolume);
+        show_segmentation(labelVolume);
     end
 
     % Save figure
@@ -185,11 +185,7 @@ function out = normalize_to_uint8(volume)
     end
 end
 
-function show_segmentation(imageVolume, labelVolume)
-
-    figure;
-    imshow3D(imageVolume, labelVolume);
-
+function show_segmentation(labelVolume)
     figure;
     p = patch(isosurface(smooth3(logical(labelVolume), 'gaussian', 7)));
     hold on;
